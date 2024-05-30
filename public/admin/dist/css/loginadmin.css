@@ -1,0 +1,237 @@
+.login-admin {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right, #40A578, #1679AB);
+}
+
+.login-admin:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+    content: "";
+}
+
+.login-admin .form-box {
+    z-index: 3;
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-admin h2 {
+    font-size: 2em;
+    text-align: center;
+    background: -webkit-linear-gradient(#dfffd8, #b4e4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-admin .inputbox {
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    /* border-bottom: 2px solid #fff; */
+}
+
+.login-admin .inputbox label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.login-admin input:focus ~ label,
+.login-admin input:valid ~ label {
+    top: -5px;
+    color: #dfffd8;
+}
+
+.login-admin .inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.login-admin .inputbox input:focus,
+.login-admin .inputbox input:valid {
+    border-bottom: 2px solid #dfffd8;
+}
+
+.login-admin .inputbox ion-icon {
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.login-admin .inputbox input:focus + ion-icon,
+.login-admin .inputbox input:valid + ion-icon {
+    color: #dfffd8;
+}
+
+.login-admin .forget {
+    margin: -15px 0 15px;
+    font-size: 0.9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-admin .forget label {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.login-admin .forget label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.login-admin .forget label .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+.login-admin .forget label:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.login-admin .forget label input:checked ~ .checkmark {
+    background-color: #06283d;
+}
+
+.login-admin .forget label .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.login-admin .forget label input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.login-admin .forget label .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.login-admin .forget a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.login-admin .forget a:hover {
+    text-decoration: underline;
+    color: #dfffd8;
+}
+
+.login-admin button {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    /* background-image: linear-gradient(to right, #00dfc4, #00fc97, #08bff1); */
+    background-image: linear-gradient(to right, #dfffd8, #a5f1e9, #b4e4ff);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    background-size: 200%;
+    transition: 0.5s;
+}
+
+.login-admin button:hover {
+    background-position: right;
+}
+
+.login-admin .register {
+    font-size: 0.9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.login-admin .register p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.login-admin .register p a:hover {
+    text-decoration: underline;
+}
+
+.main-order-wait,
+.main-order-confirm,
+.main-order-shipping,
+.main-order-delivered,
+.main-order-cancel {
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+.main-order-wait {
+    background-color: gray;
+    color: white;
+}
+.main-order-confirm {
+    background-color: lightgreen;
+}
+.main-order-shipping {
+    background-color: lightgoldenrodyellow;
+}
+.main-order-delivered {
+    background-color: khaki;
+}
+.main-order-cancel {
+    background-color: lightcoral;
+}
